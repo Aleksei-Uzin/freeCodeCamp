@@ -34,7 +34,7 @@
  */
 
 function checkCashRegister(price, cash, cid) {
-  const mony = {
+  const money = {
     PENNY: 0.01,
     NICKEL: 0.05,
     DIME: 0.1,
@@ -51,8 +51,8 @@ function checkCashRegister(price, cash, cid) {
 
   for (let i = cid.length - 1; i >= 0; i--) {
     const [unit, amount] = cid[i]
-    const rank = ~~(div / mony[unit])
-    const count = mony[unit] * rank
+    const rank = ~~(div / money[unit])
+    const count = money[unit] * rank
     const total = amount >= count ? count : amount
 
     if (rank > 0) {
