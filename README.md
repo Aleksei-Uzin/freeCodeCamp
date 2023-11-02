@@ -1,4 +1,4 @@
-<img style="width:60%" src="https://d33wubrfki0l68.cloudfront.net/774b60156d8f103170dc66f3ad10310941114653/da262/img/fcc_secondary_large.svg">
+<img style="width:60%;pointer-events:none;" src="https://d33wubrfki0l68.cloudfront.net/774b60156d8f103170dc66f3ad10310941114653/da262/img/fcc_secondary_large.svg">
 
 1. [**JavaScript Algorithms and Data Structures**][js-course]
 
