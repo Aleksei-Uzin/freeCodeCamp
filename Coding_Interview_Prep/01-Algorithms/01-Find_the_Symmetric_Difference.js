@@ -8,31 +8,28 @@
 
 // My solution
 function sym(...args) {
-  return getDiff(args)
+  const res = []
 
-  function getDiff(arrays, res = []) {
-    if (arrays.length === 0) return res
+  while (args.length > 0) {
+    const set = [...new Set(args.shift())]
 
-    const set = [...new Set(arrays.shift())]
-
-    set.forEach(item => {
+    for (let item of set) {
       const index = res.indexOf(item)
 
       if (index >= 0) delete res[index]
       else res.push(item)
-    })
-
-    return getDiff(arrays, res).filter(Boolean)
+    }
   }
+
+  return res.filter(Boolean)
 }
 
 // A
+const sym = (...args) => [...new Set(args.reduce(diff))]
 const diff = (arr1, arr2) => [
   ...arr1.filter(e => !arr2.includes(e)),
   ...arr2.filter(e => !arr1.includes(e)),
 ]
-
-const sym = (...args) => [...new Set(args.reduce(diff))]
 
 // B
 function sym(...args) {
